@@ -1,14 +1,5 @@
-<?php
-require 'vendor/autoload.php';
-use Elasticsearch\ClientBuilder;
-$client = ClientBuilder::create()->build();
-
-$params['index'] = 'pokemon';
-$params['type'] = 'pokemon_trainer';
-$params['body']['query']['match']['age'] = 15;
-
-$result = $client->search($params);
-
-echo $result;
-
-?>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url=https://pathfinder.brigzzy.net/?search=<?php echo  $_GET['search'] ?>" />
+</head>
+</html>
